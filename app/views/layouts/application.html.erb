@@ -3,12 +3,27 @@
   <head>
     <title>TheNatural</title>
     <%= csrf_meta_tags %>
-
+    <title> Marquis Mitchell - Personal Trainer </title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+    <header id="main_navigation" class="clearfix">
+      <a href="index.html" class="name">Mar The Natural</a>
+      <nav>
+        <%=link_to "Articles", posts_path %>
+        <a href="#">Projects</a>
+        <a href="#">Reults</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
     <%= yield %>
   </body>
+
+
 </html>
