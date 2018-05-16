@@ -1,0 +1,44 @@
+<div class="wrapper wrapper_padding clearfix">
+  <div class="col-1 about homepage_content">
+    <h2>About</h2>
+    <hr>
+    <p> Use this Section to write a bio </p>
+    <p> Use P tags to seperate out different lines and &amp; for ampershand </p>
+    <p> I may use this as a template for my own site and then build differently
+       for Maruis and others but a strong foundation is key and I feel like I'm
+       actually learnign to build a site </p>
+    <p> I am I Personal Trainer and Boxing Coach working out of "Insert Gym here."
+        My goal is to show people that they can get in shape and have fun doing it.
+        You can see the results and progress of my clients at <a href="#">Results</a>.</p>
+  </div>
+  <div class="col-2 homepage_content">
+    <h2>Stuff I've Written</h2>
+    <hr>
+    <% @posts.each do |post|%>
+      <h3><a href="#"><%= link_to post.title, post %></a></h3>
+      <p class="date"><%= post.created_at.strftime("%A, %b, %d")%></p>
+    <% end %>
+  </div>
+  <div class="col-3 homepage_content">
+    <h2> Stuff I've Built </h2>
+    <hr>
+    <p> Links to Projects </p>
+    <h3><a href="#">Unicasts</a></h3>
+    <p class="date"> Monday May 14th </p>
+    <h3><a href="#">Community Building</a></h3>
+    <p class="date"> Monday May 14th </p>
+    <h3><a href="#">12 in 12 challenge</a></h3>
+    <p class="date"> Monday May 14th </p>
+  </div>
+  <div class="col-4 homepage_content">
+    <h2> Success Stories </h2>
+    <hr>
+    <p> Links to customer testimonials(under results) </p>
+    <h3><a href="#">Scrawn to Strong</a></h3>
+    <p class="date"> Monday May 14th </p>
+    <h3><a href="#">Flabby to Fit</a></h3>
+    <p class="date"> Monday May 14th </p>
+    <h3><a href="#">Going for the Gold</a></h3>
+    <p class="date"> Monday May 14th </p>
+  </div>
+</div>
