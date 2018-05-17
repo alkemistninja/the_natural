@@ -3,7 +3,7 @@
   var disqus_shortname = 'Astral Monkey Studios';
   var disqus_identifier = '<%= @post.id %>';
   var disqus_title = '<%= @post.title %>';
-  var disqus_url = '<%= url_for(@post, {only_path: false}) %>';
+  var disqus_url = '<%= url_for( @post ) %>';
 
 
   (function() { // DON'T EDIT BELOW THIS LINE
