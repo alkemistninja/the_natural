@@ -1,10 +1,11 @@
 <div id="disqus_thread"></div>
-<script>
-  this.shortname = 'Astral Monkey Studios';
-  this.identifier = 'article-<%= @post.id %>';
-  this.title = '<%= @post.title %>';
-  this.url = '<%= url_for( @post ) %>';
-
+<script type="text/javascript">
+  var disqus_config = function(){
+    this.shortname = 'Astral Monkey Studios';
+    this.identifier = '<%= @post.id %>';
+    this.title = '<%= @post.title %>';
+    this.url = '<%= url_for( @post ) %>';
+  };
 
   (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
