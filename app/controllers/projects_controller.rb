@@ -26,9 +26,16 @@ before_action :find_project, only: [:show, :edit, :update, :destroy]
   end
 
   def update
+    if @project.update project_params
+      redirect_to @project, notice: "You updated the Project"
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @project.destroy
+    redirect_to projects_path
   end
 
   private
